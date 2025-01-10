@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Aldrich", serif;
 }
+
 body{
     color: #fff;
 }
@@ -26,17 +29,23 @@ body{
     -o-border-radius: 15px;
     padding: 20px;
 }
+.form-control input::placeholder{
+    font-size: 16px;
+}
 .form-control input{
     width: 92%;
     font-size:20px;
     font-weight: 700;
     text-transform: capitalize;
-    padding: 10px;
+    padding: 5px 10px ;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+.form-control input.empty::placeholder{
+    color: red;
 }
 .form-control button{
     font-size: 20px;
@@ -61,6 +70,16 @@ body{
     color: #fff;
     background-color: #040b3cdd;
 }
+.eidit , .trash{
+    cursor: pointer;
+    padding: 0px 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+.trash{
+    color: rgb(189, 84, 84);
+}
 .content{
     display: flex;
     justify-content: space-between;
@@ -83,10 +102,43 @@ body{
     text-align: center;
     border-bottom: 1px solid #fff;
     padding: 10px 0;
+    font-size: 20px;
+    display: flex;justify-content: space-around;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+
+}
+.list.func{
+    width: fit-content;
+}
+.list p{
+    padding: 5px 0 0 ;
+    margin: 0;
+    width: 100%;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+}
+.completeplx{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.completeplx p{
+    margin: 5px 0 0;
+    padding: 0;
 }
 #pendingListItemHolder,
 #completedListItemHolder {
     padding: 5px 15px;
+    display: flex;
+    flex-direction: column-reverse;
 }
 #pendingListItemHolder li{
     font-size: 20px;
@@ -147,4 +199,13 @@ body{
 .statusCompleted{
     display: block;
     text-decoration: line-through;
+}
+
+.boxes button{
+    width: 50%;
+    padding: 5px;
+}
+.completedalign{
+    display: flex;
+    justify-content: space-between;
 }
