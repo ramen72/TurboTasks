@@ -69,11 +69,11 @@ ul {
 
 .taskMainLeft ul li:hover {
     background-color: rgba(241, 241, 241, .1);
-    -webkit-transition: all linear .2s;
-    -moz-transition: all linear .2s;
-    -ms-transition: all linear .2s;
-    -o-transition: all linear .2s;
-    transition: all linear .2s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    transition: all linear .3s;
 }
 
 .taskMainLeft ul li span {
@@ -133,6 +133,10 @@ ul {
     transition: all linear .2s;
 }
 
+.inputTask #upBtn{
+    display: none;
+}
+
 .taskBox {
     background: #f1f1f1;
     -webkit-border-radius: 10px;
@@ -176,6 +180,11 @@ ul {
     -ms-border-radius: 5px ;
     -o-border-radius: 5px ;
     border-radius: 5px ;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    transition: all linear .3s;
 }
 
 
@@ -192,11 +201,16 @@ ul {
     background-clip: text;
     color: transparent;
     cursor: pointer;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    transition: all linear .3s;
 }
 
 
 .taskBox ul li:hover {
-    background: var(--gradient);
+    background-color: #852170;
     color: #f1f1f1;
 }
 .taskBox ul li:hover i{
