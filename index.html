@@ -1,69 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo Apps</title>
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Fontawesome Pro -->
+
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+        href="/css/app-wa-4605c815f1874757bc9ac33aa114fb0f.css?vsn=d">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-thin.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-solid.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-regular.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-light.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-thin.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-thin.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-regular.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-light.css">
     <!-- Bootstrap css File link -->
     <link rel="stylesheet" href="bootstrap-5.3.2/bootstrap.min.css">
     <!-- Row css file Link -->
-    <link rel="stylesheet" href="css/spacing.css">
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
 
-    <section id="todo">
-        <main id="main" class="main">
-            <h1 class="heading text-center text-white mb-4">ToDo List</h1>
-            <div class="form-control py-2 mb-4">
-                <input type="text" name="item" id="newItemText">
-                <button id="addNewItemBtn" type="submit">Add</button>
-            </div>
-            <div class="content">
-                <div class="pending">
-                    <h2 class="itemHead">Pending Items Details</h2>
-                    <ul id="pendingListItemHolder">
-                        <li class="statusPending">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <i id="statusDone" class="fa-regular fa-circle"></i>
-                                    I am Ramen
-                                </div>
-                                <i class="fa-solid fa-trash-can"></i>
-                            </div>
-                        </li>
-                    </ul>
+</head>
+
+<body>
+    <main id="main">
+        <div class="container">
+            <div class="row ">
+                <div class="col-6">
+                    <div class="trashMain">
+                        <h2>Trash</h2>
+                        <ul class="trash">
+                            <li>1. Write Your Task <span> <i class="fa-solid fa-rotate-right"></i> <i class="fa-solid fa-trash"></i></span></li>
+                            <li>1. Write Your Task <span> <i class="fa-solid fa-rotate-right"></i> <i class="fa-solid fa-trash"></i></span></li>
+                           
+                        </ul>
+                    </div>
                 </div>
-                <div class="done">
-                    <h2 class="itemHead">Completed Items Details</h2>
-                    <ul id="completedListItemHolder">
-                        <li class="">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <i id="statusDone" class="fa-regular fa-circle-check"></i>
-                                    I am Ramen
-                                </div>
-                                <i class="fa-solid fa-trash-can"></i>
-                            </div>
-                        </li>
-                    </ul>
+
+
+                <div class="col-6">
+                    <div class="taskMain w-100">
+                        <div class="inputTask d-flex justify-content-between">
+                            <input type="text" placeholder="Write Your Task Here"> <button>Add</button>
+                        </div>
+                        <div class="taskBox mt-4">
+                            <h2>Task List</h2>
+                            <ul>
+                                <li>1. Write Your Task <span> <i class="fa-regular fa-pen-to-square"></i> <i
+                                            class="fa-light fa-trash"></i></span></li>
+                                <li>1. Write Your Task <span> <i class="fa-regular fa-pen-to-square"></i> <i
+                                            class="fa-light fa-trash"></i></span></li>
+                               
+
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </main>
-    </section>
-    
-    <!-- <ul class="ulMain">
-        <li class="liItem">sfddsl</li>
-    </ul> -->
-    
+        </div>
+
+    </main>
+
+
+
+
     <!-- Bootstrap JS file Link -->
     <script src="bootstrap-5.3.2/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Fontawesome CDN Link -->
     <script src="https://kit.fontawesome.com/5e82e4ce8d.js" crossorigin="anonymous"></script>
 
     <!-- Row JS File Link -->
     <script src="js/script.js"></script>
-    <h1>for test</h1>
 </body>
+
 </html>
