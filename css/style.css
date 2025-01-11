@@ -27,7 +27,7 @@ body{
     padding: 20px;
 }
 .form-control input{
-    width: 92%;
+    width: 89%;
     font-size:20px;
     font-weight: 700;
     text-transform: capitalize;
@@ -56,6 +56,10 @@ body{
     -moz-transition: all 0.3s linear;
     -ms-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
+}
+#addNewItemBtn,
+#updateItemBtn{
+    width: 124px;
 }
 #updateItemBtn{
     display: none;
