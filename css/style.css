@@ -102,6 +102,17 @@ body{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pendingDeleteBtn{
+    padding: 5px 10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 /* #pendingListItemHolder li:nth-child(odd){
     background-color: #c102a3;
