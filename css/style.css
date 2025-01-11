@@ -95,6 +95,12 @@ ul {
     width: 648px;
 }
 
+@media (max-width: 991px) {
+    .taskMainRight{
+        margin-bottom: 30px;
+    }
+}
+
 .inputTask {
     display: flex;
     justify-content: space-between;
