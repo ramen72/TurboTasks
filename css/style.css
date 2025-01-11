@@ -57,6 +57,9 @@ body{
     -ms-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
 }
+#updateItemBtn{
+    display: none;
+}
 .form-control button:hover{
     color: #fff;
     background-color: #040b3cdd;
