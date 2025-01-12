@@ -74,9 +74,13 @@ const addNewItemBtn = document.querySelector("#addNewItemBtn");
 const updateItemBtn = document.querySelector("#updateItemBtn");
 const newItemText = document.querySelector("#newItemText");
 
-// State Variables
+// State Variables for pending
 const pendingItemArray = [];
 let updateIndex = null;
+
+// State Variables for complete
+const completeItemArray = [];
+let completeItemIndex = null;
 
 // Event Listeners
 addNewItemBtn.addEventListener("click", addItem);
@@ -89,28 +93,60 @@ function addItem() {
         alert("You must input your task");
         return;
     }
-
     pendingItemArray.push(pendingItem);
     updateDisplay();
     resetInputField();
-    console.log(pendingItemArray);
+    // console.log(pendingItemArray);
 }
 
 // Function to update the display of pending items
 function updateDisplay() {
     pendingListItemHolder.innerHTML = "";
-
     pendingItemArray.forEach((item, index) => {
         pendingListItemHolder.innerHTML += `
             <li class="statusPending">
-                ${item} 
-                <button class="editBtn">Edit</button>
-                <button class="pendingDeleteBtn">Delete</button>
+                <span class="taskItem">${item}</span>
+                <div class="buttonsWrapper">
+                    <button class="editBtn">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="doneBtn">
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+                    <button class="pendingDeleteBtn">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+            </li>`;
+    });
+{/* <button class="editBtn">Edit</button>
+<button class="doneBtn">Done</button>
+<button class="pendingDeleteBtn">Delete</button> */}
+    completedListItemHolder.innerHTML = "";
+    completeItemArray.forEach((item, index) => {
+        completedListItemHolder.innerHTML += `
+            <li class="statusPending">
+                <span class="taskItem">${item}</span>
+                <div class="buttonsWrapper">
+                    <button class="completeRestoreBtn">
+                        <i class="fa-solid fa-rotate-left"></i>
+                    </button>
+                    <button class="completeDeleteBtn">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
             </li>`;
     });
 
+    // EventListener for pending Items
     addDeleteEventListeners();
     addEditEventListeners();
+    addDoneEventListeners();
+    
+    // EventListener for complete Items
+    addCompleteDeleteEventListeners();
+    addCompleteRestoreBtnEventListeners();
+
 }
 
 // Function to handle item updates
@@ -160,6 +196,43 @@ function addEditEventListeners() {
             newItemText.value = pendingItemArray[index];
             toggleAddUpdateButtons(false);
             updateIndex = index;
+        });
+    });
+}
+
+// Add event listeners for pending Done buttons
+function addDoneEventListeners() {
+    const doneButtons = document.querySelectorAll(".doneBtn");
+
+    doneButtons.forEach((button, index) => {
+        button.addEventListener("click", (e) => {
+           completeItemArray.push(pendingItemArray[index])
+           pendingItemArray.splice(index, 1);
+           updateDisplay()
+        });        
+    });
+}
+
+// Add event listeners for complete delete buttons
+function addCompleteDeleteEventListeners() {
+    const completeDeleteBtn = document.querySelectorAll(".completeDeleteBtn");
+
+    completeDeleteBtn.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            completeItemArray.splice(index, 1);
+            updateDisplay();
+        });
+    });
+}
+// Add event listeners for complete Restore buttons
+function addCompleteRestoreBtnEventListeners() {
+    const completeRestoreBtns = document.querySelectorAll(".completeRestoreBtn");
+
+    completeRestoreBtns.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            pendingItemArray.push(completeItemArray[index])
+            completeItemArray.splice(index, 1);
+            updateDisplay();
         });
     });
 }
