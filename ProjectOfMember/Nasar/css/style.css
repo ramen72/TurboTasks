@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gradient: linear-gradient(90deg, #852170, #CF414B)
+}
+
+body {
+    font-family: "Poppins", serif;
+    font-size: 20px;
+    background: var(--gradient);
+}
+
+main {
+    margin: 20px auto 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.navWrapper{
+    padding-bottom: 100px;
+    color: #fff;
+    margin-top: 65px;
+}
+.navItem{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+.navItem:hover{
+    background-color: #fff;
+    color: #9d2b63;
+}
+.author{
+    font-family: "Srisakdi", serif;
+    font-size: 25px;
+    position: absolute;
+    top: -50px;
+    right: 10px;
+    color: #fff;
+}
+.author span{
+    font-weight: 700;
+}
+/* =========================== Common Css End ====================== */
+
+/* ============================== Left part Start =====================*/
+.taskMainLeft {
+    border: 1px solid rgba(241, 241, 241, 0.3);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    padding: 24px 0 0 24px;
+    height: 100%;
+}
+
+.taskMainLeft h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #D9D9D9;
+    border-bottom: 1px solid rgba(241, 241, 241, 0.5);
+    padding-bottom: 10px;
+    margin: 0 24px 40px 0;
+}
+
+.taskMainLeft ul {
+    height: 464px;
+    padding-right: 24px;
+    overflow-y: auto;
+}
+
+.taskMainLeft ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #bbbbbb;
+    padding: 6px 10px;
+    border: 1px solid rgba(164, 164, 164, .5);
+    margin-bottom: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.taskMainLeft ul li:hover {
+    background-color: rgba(241, 241, 241, .1);
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    transition: all linear .3s;
+}
+
+.taskMainLeft ul li span {
+    width: 9%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskMainLeft ul li span i {
+    font-style: 26px;
+    color: #bbbbbb;
+    cursor: pointer;
+
+}
+
+/* ============================== Right part Start ===================== */
+
+.taskMainRight {
+    width: 648px;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .taskMainRight{
+        margin-bottom: 30px;
+    }
+}
+
+.inputTask {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 24px;
+}
+
+.inputTask input {
+    width: 100%;
+    padding: 10px 24px;
+    border: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.inputTask button {
+    padding: 10px 20px;
+    border: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #CF414B;
+    background: #fff;
+}
+.inputTask button:hover{
+    background: #f1f1f1;
+    -webkit-transition: all linear .2s;
+    -moz-transition: all linear .2s;
+    -ms-transition: all linear .2s;
+    -o-transition: all linear .2s;
+    transition: all linear .2s;
+}
+
+.inputTask #upBtn{
+    display: none;
+}
+
+.taskBox {
+    background: #f1f1f1;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    height: 512px;
+    padding: 24px 0 0 24px;
+    margin-top: 24px;
+}
+
+.taskBox h2 {
+    font-size: 22px;
+    font-weight: 700;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border-bottom: 1px solid #852170;
+    padding-bottom: 10px;
+    margin: 0 24px 30px 0;
+}
+
+.taskBox ul {
+    height: 414px;
+    padding-right: 24px;
+    overflow-y: auto;
+}
+
+.taskBox ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1e1e1e;
+    padding: 6px 10px;
+    margin-bottom: 5px;
+    border: 1px solid rgba(164, 164, 164, .5);
+    -webkit-border-radius: 5px ;
+    -moz-border-radius: 5px ;
+    -ms-border-radius: 5px ;
+    -o-border-radius: 5px ;
+    border-radius: 5px ;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    transition: all linear .3s;
+}
+
+
+.taskBox ul li span {
+    width: 9%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskBox ul li span i {
+    font-style: 26px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    cursor: pointer;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    transition: all linear .3s;
+}
+
+
+.taskBox ul li:hover {
+    background-color: #852170;
+    color: #f1f1f1;
+}
+.taskBox ul li:hover i{
+    color: #f1f1f1;
+}
