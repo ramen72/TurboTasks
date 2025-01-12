@@ -15,14 +15,54 @@ body {
 }
 
 main {
-    margin: 150px auto 0;
+    margin: 20px auto 0;
 }
 
 ul {
     list-style: none;
     padding: 0;
 }
-
+a{
+    text-decoration: none;
+}
+.navWrapper{
+    padding-bottom: 100px;
+    color: #fff;
+    margin-top: 65px;
+}
+.navItem{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+.navItem:hover{
+    background-color: #fff;
+    color: #9d2b63;
+}
+.author{
+    font-family: "Srisakdi", serif;
+    font-size: 25px;
+    position: absolute;
+    top: -50px;
+    right: 10px;
+    color: #fff;
+}
+.author span{
+    font-weight: 700;
+}
 /* =========================== Common Css End ====================== */
 
 /* ============================== Left part Start =====================*/
@@ -93,6 +133,7 @@ ul {
 
 .taskMainRight {
     width: 648px;
+    position: relative;
 }
 
 @media (max-width: 991px) {

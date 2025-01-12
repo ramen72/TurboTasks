@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo Apps</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Srisakdi:wght@400;700&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-
+    <ul class="navWrapper">
+        <li><a href="../../index.html" class="navItem" id="home">Home</a></li>
+        <li><a href="../Ramen/index.html" class="navItem" id="ramen">Ramen</a></li>
+        <li><a href="../Nasar/index.html" class="navItem" id="nasar">Nasar</a></li>
+        <li><a href="./index.html" class="navItem" id="shakhawat">Shakhawat</a></li>
+        <li><a href="../Fahim/index.html" class="navItem" id="fahim">Fahim</a></li>
+        <li><a href="../Afsana/index.html" class="navItem" id="afsana">Afsana</a></li>
+    </ul>
     <section id="todo">
         <main id="main" class="main">
+            <h2 class="author">Developed by <span>Shakhawat</span></h2>
             <h1 class="heading text-center text-white mb-4">ToDo List</h1>
             <div class="form-control py-2 mb-4">
                 <input type="text"  id="newItemText" placeholder="enter your task...." oninput="placehold()">
