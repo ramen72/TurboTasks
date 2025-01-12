@@ -1,72 +1,3 @@
-// const pendingListItemHolder = document.querySelector("#pendingListItemHolder");
-// const completedListItemHolder = document.querySelector("#completedListItemHolder");
-// const addNewItemBtn = document.querySelector("#addNewItemBtn");
-// const updateItemBtn = document.querySelector("#updateItemBtn");
-// const newItemText = document.querySelector("#newItemText");
-// const checkedBox = document.querySelector("#checkedBox");
-// const deleteIcon = document.querySelector("#deleteIcon");
-
-// const statusDone = document.querySelector("#statusDone");
-// const statusPending = document.querySelector("#statusPending");
-
-// const pendingItemArray = [];
-// let updateIndex = null;
-
-// addNewItemBtn.addEventListener("click",addItem)
-
-// function addItem(){
-//     let pendingItem = newItemText.value.trim();
-//     if(!pendingItem){
-//         return alert("You must input your task")
-//     }
-//     pendingItemArray.push(pendingItem)
-//     displayUpdate()
-//     newItemText.value = "";
-//     console.log(pendingItemArray);
-// }
-
-// function displayUpdate() {
-//     pendingListItemHolder.innerHTML = "";
-//     pendingItemArray.map((item,index)=>{
-//         pendingListItemHolder.innerHTML += `<li class="statusPending">${item} <button class="editBtn">Edit</button><button class="pendingDeleteBtn">Delete</button></li>`
-//     })
-
-//     const pendingDeleteBtn = document.querySelectorAll(".pendingDeleteBtn");
-//     const pendingDeleteBtnArray = Array.from(pendingDeleteBtn)
-
-//     const editBtn = document.querySelectorAll(".editBtn");
-//     const editBtnArray = Array.from(editBtn)
-    
-//     pendingDeleteBtnArray.map((item,index)=>{
-//         item.addEventListener("click",()=>{
-//             console.log(pendingItemArray);
-//             pendingItemArray.splice(index,1)
-//             displayUpdate()            
-//         })
-//     })
-//     editBtnArray.map((item,index)=>{
-//         item.addEventListener("click",()=>{
-//             console.log("Edit");
-//             newItemText.value = pendingItemArray[index]
-//             addNewItemBtn.style.display = "none"
-//             updateItemBtn.style.display = "inline-block"
-//             updateIndex = index;
-//         })
-//     })
-// }
-
-// updateItemBtn.addEventListener("click",()=>{
-//     pendingItemArray[updateIndex] = newItemText.value.trim();
-//     console.log(pendingItemArray[updateIndex]);
-//     displayUpdate();
-//     newItemText.value = "";
-//     addNewItemBtn.style.display = "inline-block"
-//     updateItemBtn.style.display = "none"
-// })
-
-
-
-
 // DOM Elements
 const pendingListItemHolder = document.querySelector("#pendingListItemHolder");
 const completedListItemHolder = document.querySelector("#completedListItemHolder");
@@ -96,7 +27,6 @@ function addItem() {
     pendingItemArray.push(pendingItem);
     updateDisplay();
     resetInputField();
-    // console.log(pendingItemArray);
 }
 
 // Function to update the display of pending items
@@ -119,9 +49,6 @@ function updateDisplay() {
                 </div>
             </li>`;
     });
-{/* <button class="editBtn">Edit</button>
-<button class="doneBtn">Done</button>
-<button class="pendingDeleteBtn">Delete</button> */}
     completedListItemHolder.innerHTML = "";
     completeItemArray.forEach((item, index) => {
         completedListItemHolder.innerHTML += `
