@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Srisakdi:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(../images/web.jpg);
+    background-size: 80%;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Poppins", serif;
+}
+
+/* common css here */
+    a{
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    ul li {
+        list-style: none;
+    }
+  
+    /* nav section start  */
+
+.nav-sec{
+    width: 980px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 25px;
+}
+
+a{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #4871f6;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 3px solid #4871f6;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+    
+li a:hover{
+    background: transparent;  
+    color: #4871f6;      
+}
+
+/* nav section end  */
+
+/* To Do section start  */
+    
+.todo-section{
+    width: 960px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    height: 600px;
+    border-radius: 30px;
+    position: relative;
+    border: 4px solid rgba(255,255,255,0.5);
+}
+
+.heading{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.p-name{
+    font-size: 23px;
+    font-weight: 500;
+    color: #fff;
+}
+.bio{
+    font-size: 25px;
+    font-family: "Srisakdi", serif;
+    font-weight: 600;
+    color: #fff;
+}
+
+.bio span{
+    font-weight: 900;
+    color: #4871f6;
+}
+
+.input-sction{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+input{
+    height: 50px;
+    width: 90%;
+    border-radius: 50px 0 0 50px ;
+    border: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+    z-index: 999;
+    outline: none;
+    font-size: 18px;
+    padding: 0 20px;
+    padding-right: 50px;
+    position: relative;
+    }
+
+.remove{
+    position: absolute;
+    right: 150px;
+    color: rgba(255,255,255,0.5);
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+
+::placeholder{
+    color: #fff;
+}
+
+.addBtn,
+.undateBtn{
+    width: 10%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    z-index: 999;
+    background: #4871f6;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.undateBtn{
+    display: none;
+}
+
+.addBtn:hover,
+.undateBtn:hover{
+    background: rgba(255,255,255,1);
+    color: #4871f6;
+}
+
+.detail-section{
+    display: flex;
+    justify-content: space-evenly;
+    border: 2.2px solid #ffffff;
+    width: 90%;
+    height: 420px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.panding-section{
+    border-right: 2px solid #ffffff;
+}
+
+.panding-section,.conplete-section{
+    width: 50%;
+    overflow: auto;
+    }
+
+h3{ text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 5px;
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.pending-items,
+.complete-items{
+    padding: 0 10px;
+    margin-top: 15px;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 5px;
+    padding: 10px;
+    width: 100%;
+    text-align: start;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,.6);
+    transition: 0.4s;
+}
+
+.item:hover{
+    background: #4871f6;
+    border-color: #4871f6;
+    box-shadow: inset -3px -3px 8px rgba(0,0,0,0.5);
+}
+
+.text-content{
+    color: white;
+    font-weight: 600;
+}
+
+.icon-box{
+    display: flex;
+    justify-content: end;
+    gap: 8px;
+}
+
+.custom-icon{
+    color: #4871f6;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.4s;
+    cursor: pointer;
+
+}
+
+.item:hover .custom-icon{
+    color: #fff;
+}
+
+    /* To Do section end  */
+
